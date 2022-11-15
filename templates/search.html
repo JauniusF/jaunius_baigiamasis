@@ -1,0 +1,12 @@
+{% extends "dashboard.html" %}
+
+{% block search %}
+<form class="d=flex" action="{{url_for('search')}}", method="post">
+    {{form2.hidden_tag()}}
+    <div class="form-control input-group input-group-sm mb-3">
+        {{form2.paieska.label(class="form-control-label") }}
+        {{form2.paieska(class="form-control inputGroup-sizing-sm") }}
+    </div>
+    {{form2.submit}}
+</form>
+{% endblock %}
