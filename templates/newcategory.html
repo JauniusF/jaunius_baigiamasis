@@ -1,0 +1,13 @@
+{% extends 'dashboard.html' %}
+{% block newCategory %}
+<div>
+    <form method="post" action="#">
+        {{form1.hidden_tag()}}
+        <div class="form-group">
+            {{form1.kategorija.label(class="form-control-label") }}
+            {{form1.kategorija(class="form-control") }}
+        </div>
+        {{form1.submit}}
+    </form>
+</div>
+{% endblock %}

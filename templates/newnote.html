@@ -1,0 +1,22 @@
+{% extends 'dashboard.html' %}
+{% block newNote %}
+<div>
+    <form method="post" action="#">
+        {{form.hidden_tag()}}
+        <div class="form-group">
+            {{form.name.label(class="form-control-label") }}
+            {{form.name(class="form-control") }}
+        </div>
+        <div class="form-group">
+            {{form.note.label(class="form-control-label") }}
+            {{form.note(class="form-control") }}
+        </div>
+        <div class="form-group">
+            {{form.category.label(class="form-control-label") }}
+            {{form.category(class="form-control") }}
+        </div>
+        {{form.submit}}
+    </form>
+</div>
+
+{% endblock %}
